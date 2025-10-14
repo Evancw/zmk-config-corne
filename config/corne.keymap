@@ -59,7 +59,7 @@
         up_pgup: up_pgup {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_PGUP";
-            bindings = <&kp UP_ARROW>, <&kp PAGE_UP>;
+            bindings = <&kp UP>, <&kp PAGE_UP>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -68,7 +68,7 @@
         down_pgdn: down_pgdn {
             compatible = "zmk,behavior-mod-morph";
             label = "DOWN_PGDN";
-            bindings = <&kp DOWN_ARROW>, <&kp PAGE_DOWN>;
+            bindings = <&kp DOWN>, <&kp PAGE_DOWN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -77,7 +77,7 @@
         left_home: left_home {
             compatible = "zmk,behavior-mod-morph";
             label = "LEFT_HOME";
-            bindings = <&kp LEFT_ARROW>, <&kp HOME>;
+            bindings = <&kp LEFT>, <&kp HOME>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -86,7 +86,7 @@
         right_end: right_end {
             compatible = "zmk,behavior-mod-morph";
             label = "RIGHT_END";
-            bindings = <&kp RIGHT_ARROW>, <&kp END>;
+            bindings = <&kp RIGHT>, <&kp END>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -94,7 +94,7 @@
     };
 
     macros {
-        browsertab: browsertab {
+        browsertabnext: browsertab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -238,10 +238,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp GRAVE         &kp N1      &kp N2      &kp N3      &kp N4       &kp N5       &kp N6   &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&kp DELETE        &trans      &trans      &up_pgup    &browsertab  &none        &kp N0   &kp N4  &kp N5  &kp N6  &trans  &trans
-&kp LS(LEFT_GUI)  &caps_word  &left_home  &down_pgdn  &right_end   &none        &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
-                                          &trans      &trans       &kp SPACE    &kp RET  &trans  &trans
+&kp GRAVE   &kp N1            &kp N2           &kp N3      &kp N4       &kp N5       &kp N6   &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&kp DELETE  &none             &kp LC(LS(TAB))  &up_pgup    &kp LC(TAB)  &none        &kp N0   &kp N4  &kp N5  &kp N6  &none   &none
+&trans      &kp LS(LEFT_GUI)  &left_home       &down_pgdn  &right_end   &none        &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
+                                               &trans      &trans       &kp SPACE    &kp RET  &trans  &trans
             >;
         };
 
@@ -256,8 +256,8 @@
 
             bindings = <
 &kp TILDE  &kp EXCL  &kp AT      &kp HASH    &kp DLLR    &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR  &trans
-&trans     &trans    &trans      &up_pgup    &trans      &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp BSLH  &trans
-&trans     &trans    &left_home  &down_pgdn  &right_end  &kp TILDE    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC              &kp PIPE  &trans
+&trans     &trans    &trans      &up_pgup    &trans      &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp BSLH  &trans
+&trans     &trans    &left_home  &down_pgdn  &right_end  &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC              &kp PIPE  &trans
                                  &trans      &trans      &kp SPACE    &kp RET    &trans     &trans
             >;
         };
