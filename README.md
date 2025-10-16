@@ -12,7 +12,7 @@
 Want an easy way to customize the keymap? https://nickcoutsos.github.io/keymap-editor/
 
 
-![zmkmy_keymap (7)](zmk-config-corne/Docs/my_keymap.svg)
+![zmkmy_keymap (7)](zmk-config-corne/Docs/my_keymap.png)
 Keymap image made with https://keymap-drawer.streamlit.app/
 
 
