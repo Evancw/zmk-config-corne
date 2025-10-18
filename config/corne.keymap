@@ -24,20 +24,6 @@
             global-quick-tap;
         };
 
-        para: para {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PARA";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
-        };
-
-        caps: caps {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS";
-            #binding-cells = <0>;
-            continue-list = <MINUS BACKSPACE>;
-        };
-
         paraless: paraless {
             compatible = "zmk,behavior-mod-morph";
             label = "PARALESS";
@@ -93,31 +79,12 @@
         };
     };
 
-    macros {
-        browsertabnext: browsertab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LCTRL>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <13 29>;
-        };
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <15 21>;
         };
 
         perc {
@@ -204,6 +171,21 @@
             bindings = <&paragreat>;
             key-positions = <20 21>;
         };
+
+        exclaim {
+            bindings = <&kp EXCL>;
+            key-positions = <1 13>;
+        };
+
+        carot {
+            bindings = <&kp CARET>;
+            key-positions = <6 18>;
+        };
+
+        ampersand {
+            bindings = <&kp AMPS>;
+            key-positions = <7 19>;
+        };
     };
 
     //
@@ -221,10 +203,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp F     &kp P  &kp G        &kp J            &kp L  &kp U         &kp Y    &kp SEMICOLON  &kp ESC
-&kp BACKSPACE  &kp A  &kp R  &kp S     &kp T  &kp D        &kp H            &kp N  &kp E         &kp I    &kp O          &kp SQT
-&kp LCTRL      &kp Z  &kp X  &kp C     &kp V  &kp B        &kp K            &kp M  &kp COMMA     &kp DOT  &kp FSLH       &kp RET
-                             &kp LGUI  &mo 2  &kp SPACE    &kp RIGHT_SHIFT  &mo 1  &kp LEFT_ALT
+&kp TAB        &kp Q  &kp W  &kp F     &kp P  &kp G        &kp J       &kp L  &kp U         &kp Y    &kp SEMICOLON  &kp ESC
+&kp BACKSPACE  &kp A  &kp R  &kp S     &kp T  &kp D        &kp H       &kp N  &kp E         &kp I    &kp O          &kp SQT
+&kp LCTRL      &kp Z  &kp X  &kp C     &kp V  &kp B        &kp K       &kp M  &kp COMMA     &kp DOT  &kp FSLH       &kp RET
+                             &kp LGUI  &mo 2  &kp SPACE    &kp LSHIFT  &mo 1  &kp LEFT_ALT
             >;
         };
 
@@ -238,7 +220,7 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp GRAVE   &kp N1            &kp N2           &kp N3      &kp N4       &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&kp GRAVE   &kp N1            &kp N2           &kp N3      &kp N4       &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BACKSPACE
 &kp DELETE  &none             &kp LC(LS(TAB))  &up_pgup    &kp LC(TAB)  &none     &kp N0  &kp N4  &kp N5  &kp N6  &none   &none
 &trans      &kp LS(LEFT_GUI)  &left_home       &down_pgdn  &right_end   &none     &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
                                                &trans      &trans       &trans    &trans  &trans  &trans
