@@ -222,10 +222,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TILDE   &kp EXCL  &kp AT           &kp HASH    &kp DLLR     &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR  &trans
-&kp DELETE  &trans    &kp LC(LS(TAB))  &up_pgup    &kp LC(TAB)  &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp BSLH  &trans
-&trans      &trans    &left_home       &down_pgdn  &right_end   &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC              &kp PIPE  &trans
-                                       &trans      &trans       &trans       &trans     &trans     &trans
+&kp TILDE   &trans            &kp LC(LS(TAB))  &up_pgup    &kp LC(TAB)  &trans    &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR  &trans
+&kp DELETE  &trans            &left_home       &down_pgdn  &right_end   &trans    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp BSLH  &trans
+&trans      &kp LS(LEFT_GUI)  &trans           &trans      &trans       &trans    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC              &kp PIPE  &trans
+                                               &trans      &trans       &trans    &trans     &trans     &trans
             >;
         };
 
