@@ -82,11 +82,6 @@
     combos {
         compatible = "zmk,combos";
 
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <13 29>;
-        };
-
         perc {
             bindings = <&kp PERCENT>;
             key-positions = <5 17>;
@@ -115,16 +110,6 @@
         backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <26 14>;
-        };
-
-        copy {
-            bindings = <&kp K_COPY>;
-            key-positions = <28 27>;
-        };
-
-        paste {
-            bindings = <&kp K_PASTE>;
-            key-positions = <26 27>;
         };
 
         star {
@@ -220,10 +205,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp GRAVE   &kp N1            &kp N2           &kp N3      &kp N4       &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BACKSPACE
-&kp DELETE  &none             &kp LC(LS(TAB))  &up_pgup    &kp LC(TAB)  &none     &kp N0  &kp N4  &kp N5  &kp N6  &none   &none
-&trans      &kp LS(LEFT_GUI)  &left_home       &down_pgdn  &right_end   &none     &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
-                                               &trans      &trans       &trans    &trans  &trans  &trans
+&kp GRAVE   &trans            &kp LC(LS(TAB))  &up_pgup    &kp LC(TAB)  &trans    &trans  &trans   &kp N7  &kp N8  &kp N9  &kp BACKSPACE
+&kp DELETE  &none             &left_home       &down_pgdn  &right_end   &none     &trans  &trans   &kp N4  &kp N5  &kp N6  &kp N0
+&trans      &kp LS(LEFT_GUI)  &trans           &trans      &trans       &none     &trans  &kp DOT  &kp N1  &kp N2  &kp N3  &trans
+                                               &trans      &trans       &trans    &trans  &trans   &trans
             >;
         };
 
