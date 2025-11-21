@@ -47,9 +47,9 @@
 
     NAV {
         display-name = "Nav";
-        bindings = <    &none  &bootloader  &u_to_U_TAP &u_to_U_EXTRA   &u_to_U_BASE    &none       &kp INS     &kp HOME    &kp UP      &kp END     &kp PG_UP   &none
-                        &none  &kp LGUI     &kp LALT    &kp LCTRL       &kp LSHFT       &none       &none       &kp LSHFT   &kp LCTRL   &kp LALT    &kp LGUI    &none
-                        &none  &none        &kp RALT    &u_to_U_NUM     &u_to_U_NAV     &none       &kp K_AGAIN &kp LS(INS) &kp LC(INS) &kp LS(DEL) &kp K_UNDO  &none
+        bindings = <    &none  &bootloader  &u_to_U_TAP &u_to_U_EXTRA   &u_to_U_BASE    &none       &kp INS         &kp HOME    &kp UP      &kp END     &kp PG_UP   &none
+                        &none  &kp LGUI     &kp LALT    &kp LCTRL       &kp LSHFT       &none       &u_caps_word    &kp LEFT   &kp DOWN   &kp RIGHT    &kp PG_DN    &none
+                        &none  &none        &kp RALT    &u_to_U_NUM     &u_to_U_NAV     &none       &kp K_AGAIN     &kp LS(INS) &kp LC(INS) &kp LS(DEL) &kp K_UNDO  &none
                         &none  &none        &none       &kp RET         &kp BSPC        &kp DEL >;
         };
 
