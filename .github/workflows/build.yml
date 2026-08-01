@@ -2,4 +2,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    # Pinned to match the ZMK revision in config/west.yml. Tracking @main here
+    # breaks the build: main's workflow requires CONFIG_ZMK_BOARD_COMPAT, which
+    # does not exist in v0.3. Bump both together, never just one.
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
