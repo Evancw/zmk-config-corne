@@ -1,10 +1,13 @@
 # My shops https://keyboard-hoarders.com // https://keyboardhoarders.etsy.com
 # Now change the keymap using ZMK.studio
+Note: this build uses a dongle, so the dongle is the central. Studio talks to
+the dongle, not to either half.
+
 1. Go to zmk.studio
-2. plug in left half of the keyboard via USB to computer
+2. plug the dongle into the computer via USB
 3. select USB once at zmk.studio
-4. this will open a list of connected devices. Find CorneWireless and connect
-5. Unlock keyboard by going to the last layer on your keyboard and use the zmk studio unlock key as shown in the keymap picture.
+4. this will open a list of connected devices. Find the dongle and connect
+5. no unlock step is needed - the dongle is built with CONFIG_ZMK_STUDIO_LOCKING=n (see build.yaml)
 
 ![IMG_0446](https://github.com/user-attachments/assets/1f24f8bd-588f-4f2e-bc61-a1301dc8450f)
 
